@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-  int arr[25],n,t,y;
+  int arr[25],n,t,y,flag;
   cout<<"Enter the number of test cases"<<endl;
   cin>>t;
   for(int i=0; i<t; i++)
@@ -20,13 +20,17 @@ int main()
     {
       if(arr[j]==y)
       {
-        cout<<"Element Present at:"<< j+1 << endl;
+        flag=1;
         break;
       }
-      else
-      {
-        cout<<"Element not present"<<endl;
-      }
+    }
+    if(flag==1)
+    {
+      cout<<"Element Present at:"<< j+1 << endl;
+    }
+    else
+    {
+      cout<<"Not Present"<<endl;
     }
   }
 }
