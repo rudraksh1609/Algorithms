@@ -1,15 +1,12 @@
-#include <stdio.h>
-
+#include <iostream>
+suing namespace std;
 int binarySearch(int arr[], int n, int key, int *comparisons)
 {
     int low = 0, high = n - 1;
-
     while (low <= high)
     {
         (*comparisons)++; 
-
         int mid = low + (high - low) / 2;
-
         if (arr[mid] == key)
         {
             return mid;
@@ -39,17 +36,15 @@ int main()
     cout<<"Enter the key to be searched:"<<endl;
     cin>>key;
     int index = binarySearch(arr, n, key, &comparisons);
-
     if (index != -1)
     {
-        printf("Element %d found at index %d\n", key, index);
+        cout<<"Element found at index:"<<index<<endl;
     }
     else
     {
-        printf("Element %d not found in the array\n", key);
+        cout"Element not found in the array"<<endl;
     }
-
-    printf("Total comparisons: %d\n", comparisons);
+    cout<<"Total comparisons:"<<comparisons<<endl;
 
     return 0;
 }
