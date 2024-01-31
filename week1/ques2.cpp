@@ -28,11 +28,16 @@ int binarySearch(int arr[], int n, int key, int *comparisons)
 
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int key = 5;
-    int comparisons = 0;
-
+    int arr[25],n,key,comparisons = 0;
+    cout<<"Enter the size of the array"<<endl;
+    cin>>n;
+    cout<<"Enter the elements of the array"<<endl;
+    for(int i=0; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<"Enter the key to be searched:"<<endl;
+    cin>>key;
     int index = binarySearch(arr, n, key, &comparisons);
 
     if (index != -1)
