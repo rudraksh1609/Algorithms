@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-  int arr[25],n,t,y,flag=0,j;
+  int arr[25],n,t,y,flag,j;
   cout<<"Enter the number of test cases"<<endl;
   cin>>t;
   for(int i=0; i<t; i++)
@@ -16,6 +16,7 @@ int main()
     }
     cout<<"Enter the elements to be searched:"<<endl;
     cin>>y;
+    flag=0;
     for(j=0; j<n; j++)
     {
       if(arr[j]==y)
