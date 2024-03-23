@@ -27,11 +27,13 @@ int main()
     }
     if(flag==1)
     {
-      cout<<"Element Present at:"<< j+1 << endl;
+      cout<<"Present"<<endl;
+      cout<<"Comparisons:"<<j+1<<endl;
     }
     else
     {
       cout<<"Not Present"<<endl;
+      cout<<"Comparisons:"<<j<<endl;
     }
   }
 }
